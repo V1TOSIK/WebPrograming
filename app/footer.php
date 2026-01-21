@@ -9,7 +9,7 @@ function getFooterBlock(){
             <div class='mt-4'>
                 <a href='#' class='text-gray-400 hover:text-gray-200 transition-colors duration-300 mx-2'>Privacy Policy</a>
                 <a href='#' class='text-gray-400 hover:text-gray-200 transition-colors duration-300 mx-2'>Terms of Service</a>
-                <a href='#' class='text-gray-400 hover:text-gray-200 transition-colors duration-300 mx-2'>Contact</a>
+                <a href='Contact.php' class='text-gray-400 hover:text-gray-200 transition-colors duration-300 mx-2'>Contact</a>
                 <a href='/about.php' class='text-gray-400 hover:text-gray-200 transition-colors duration-300 mx-2'>About</a>
             </div>
         </div>
