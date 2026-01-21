@@ -25,17 +25,24 @@
             
             ?>
         </section>
-        <?php
+       <?php
             $housesCount = isset($_GET['houses']) ? (int)$_GET['houses'] : 3;
-            $nextCount = $housesCount + 3;
+            $more = $housesCount + 3;
+            $less = max(3, $housesCount - 3);
         ?>
 
-        <div class="text-center mb-6">
-            <a href="?houses=<?= $nextCount ?>"
-            class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+        <div class="flex justify-center gap-4 mb-6">
+            <a href="?houses=<?= $less ?>"
+            class="bg-gray-600 text-white px-6 py-2 rounded">
+                Показати менше
+            </a>
+
+            <a href="?houses=<?= $more ?>"
+            class="bg-blue-600 text-white px-6 py-2 rounded">
                 Показати більше
             </a>
         </div>
+
 
     </main>
 
