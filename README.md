@@ -5,3 +5,7 @@
 ```bash
 docker-compose -p web-progarmming up --build -d
 ```
+4) перейти по url 
+```url
+http://localhost:8080/
+```
