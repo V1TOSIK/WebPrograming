@@ -6,8 +6,7 @@
         </div>
     </section>
 
-    <section class="text-center">
-        <h2 class="text-2xl font-semibold mb-4">Explore More</h2>
+    <section class="text-center mt-8">
         <a href="?page=houses" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
             See All Houses
         </a>

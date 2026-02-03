@@ -1,73 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact Us | Real Estate</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body class="bg-gray-100 font-sans min-h-screen flex flex-col">
+<div class="max-w-lg mx-auto">
+    <h1 class="text-3xl font-bold text-center mb-6">Contact Us</h1>
 
-<main class="flex-1 container mx-auto p-6 max-w-lg">
-    <form id="contactForm" class="bg-white p-6 rounded shadow space-y-4">
-        <input type="text" name="name" placeholder="Name" required class="w-full border p-2 rounded">
-        <input type="email" name="email" placeholder="Email" required class="w-full border p-2 rounded">
-        <input type="date" name="birth_date" required class="w-full border p-2 rounded">
-        <input type="text" name="subject" placeholder="Subject" required class="w-full border p-2 rounded">
-        <textarea name="message" placeholder="Message" required class="w-full border p-2 rounded"></textarea>
+    <form id="contactForm" class="bg-white shadow-lg rounded-lg p-8 space-y-6">
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+            <input type="text" name="name" required class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        </div>
 
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-            Send Message
-        </button>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <input type="email" name="email" required class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        </div>
 
-        <button type="reset" class="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-500 transition">
-            Clear Form
-        </button>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
+            <input type="date" name="birth_date" required class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        </div>
 
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+            <input type="text" name="subject" required class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+            <textarea name="message" rows="4" required class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+        </div>
+
+        <div class="text-center space-x-4">
+            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition w-1/2">Send</button>
+            <button type="reset" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition w-1/2">Clear</button>
+        </div>
     </form>
 
-    <div id="formFeedback" class="mt-4 text-center"></div>
-</main>
+    <div id="formFeedback" class="mt-6 text-center text-gray-700"></div>
+</div>
 
 <script>
-    const form = document.getElementById('contactForm');
-    const feedback = document.getElementById('formFeedback');
+const form = document.getElementById('contactForm');
+const feedback = document.getElementById('formFeedback');
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    feedback.innerHTML = 'Sending...';
+    feedback.className = 'mt-6 text-center text-gray-700';
 
-        feedback.innerHTML = 'Sending...';
-        feedback.className = 'mt-4 text-center text-gray-700';
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        birthDate: form.birth_date.value,
+        subject: form.subject.value,
+        message: form.message.value
+    };
 
-        const formData = {
-            name: form.name.value,
-            email: form.email.value,
-            birthDate: form.birth_date.value,
-            subject: form.subject.value,
-            message: form.message.value
-        };
+    try {
+        const res = await fetch('/endpoints/contacts.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
 
-        try {
-            const res = await fetch('/endpoints/contacts.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            });
+        const data = await res.json();
 
-            const data = await res.json();
-
-            if (data.success) {
-                feedback.innerHTML = '✅ Your message has been sent!';
-                feedback.className = 'mt-4 text-center text-green-600';
-                form.reset();
-            } else {
-                feedback.innerHTML = '⚠️ ' + (data.errors ? data.errors.join('<br>') : 'Something went wrong');
-                feedback.className = 'mt-4 text-center text-red-600';
-            }
-        } catch (err) {
-            feedback.innerHTML = '⚠️ Network error';
-            feedback.className = 'mt-4 text-center text-red-600';
+        if (data.success) {
+            feedback.innerHTML = '✅ Your message has been sent!';
+            feedback.className = 'mt-6 text-center text-green-600';
+            form.reset();
+            form.name.focus();
+        } else {
+            feedback.innerHTML = '⚠️ ' + (data.errors ? data.errors.join('<br>') : 'Something went wrong');
+            feedback.className = 'mt-6 text-center text-red-600';
         }
-    });
-    </script>
-</body>
-</html>
+    } catch (err) {
+        feedback.innerHTML = '⚠️ Network error';
+        feedback.className = 'mt-6 text-center text-red-600';
+    }
+});
+</script>

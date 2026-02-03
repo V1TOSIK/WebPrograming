@@ -1,5 +1,6 @@
 <?php
 $page = $_GET['page'] ?? 'home';
+$housesLimit = $_GET['houses'] ?? 3; // початковий ліміт будинків
 
 $contentFile = match($page) {
     'houses' => __DIR__ . '/pages/HousesPage.php',
