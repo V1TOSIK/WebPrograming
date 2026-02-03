@@ -4,6 +4,8 @@ services:
     container_name: php_app
     volumes:
       - ../app:/var/www/html
+    depends_on:
+      - postgres
 
   nginx:
     image: nginx:alpine
@@ -16,18 +18,17 @@ services:
     depends_on:
       - php
 
-  mysql:
-    image: mysql:8.0
-    container_name: mysql_db
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: lab_db
-      MYSQL_USER: lab_user
-      MYSQL_PASSWORD: lab_pass
+      POSTGRES_DB: lab_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
     ports:
-      - "3306:3306"
+      - "5433:5432"
     volumes:
-      - db_data:/var/lib/mysql
+      - pg_data:/var/lib/postgresql/data
 
 volumes:
-  db_data:
+  pg_data:
