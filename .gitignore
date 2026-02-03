@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# PHP
+vendor/
+composer.lock
+
+# IDE / редактори
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS файли
+.DS_Store
+Thumbs.db
+
+# Логи та тимчасові файли
+*.log
+*.tmp
+*.cache
+
+# Tailwind / збірки
+dist/
+public/dist/
+
+# PHPStorm / IntelliJ
+*.iml
