@@ -21,20 +21,17 @@ class HouseRepository {
         ]);
     }
 
-    // Отримати всі будинки (з обмеженням)
-    public function all(int $limit = 3): array {
-        $stmt = $this->pdo->prepare("SELECT * FROM houses ORDER BY id ASC LIMIT :limit");
+    public function getAll(int $limit): array {
+        $stmt = $this->pdo->prepare("
+            SELECT h.*, c.name AS category
+            FROM houses h
+            LEFT JOIN categories c ON h.category_id = c.id
+            ORDER BY h.id DESC
+            LIMIT :limit
+        ");
         $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
         $stmt->execute();
 
-        $houses = [];
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $houses[] = new House(
-                $row['title'],
-                $row['description'],
-                (int)$row['price']
-            );
-        }
-        return $houses;
+        return array_map(fn($row) => new House($row), $stmt->fetchAll());
     }
 }

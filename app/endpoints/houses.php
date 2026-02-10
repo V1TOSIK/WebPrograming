@@ -10,11 +10,10 @@ $service = new HouseService($repo);
 // Параметр limit
 $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : 3;
 
-// Отримуємо будинки через сервіс
-$houses = $service->getLatestHouses($limit);
+echo json_encode([
+    'houses' => $service->getHouses($limit),
+    'latest' => $service->getLatestHouses(3)
+]);
 
-// Віддаємо JSON
-header('Content-Type: application/json');
-echo json_encode($houses);
 
 ?>

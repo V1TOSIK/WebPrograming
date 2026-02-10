@@ -12,13 +12,13 @@ $housesLimit = (int)($housesLimit ?? 3);
 
     <div class="mt-8 full-width">
         <div class="text-center space-x-10 mt-8 mb-8">
-            <a href="?page=houses&houses=<?= $housesLimit + 3 ?>"
-                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-                Show More
-            </a>
             <a href="?page=houses&houses=<?= max(3, $housesLimit - 3) ?>"
                 class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
                 Show Less
+            </a>
+            <a href="?page=houses&houses=<?= $housesLimit + 3 ?>"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                Show More
             </a>
         </div>
     </div>
@@ -28,28 +28,31 @@ $housesLimit = (int)($housesLimit ?? 3);
 async function loadHouses(limit = <?= $housesLimit ?>) {
     try {
         const res = await fetch(`/endpoints/houses.php?limit=${limit}`);
-        const houses = await res.json();
+        const data = await res.json();
+        const houses = data.houses ?? data;
 
         const container = document.getElementById('houses-container');
         container.innerHTML = '';
 
         houses.forEach(house => {
             const div = document.createElement('div');
-            div.className = "bg-white shadow rounded-lg p-6 hover:shadow-lg transition duration-300";
+            div.className = "bg-white shadow rounded-lg p-6";
 
             div.innerHTML = `
-                <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" 
-                     alt="${house.title}" class="w-full h-48 object-cover rounded-md mb-4">
+                <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
+                     class="w-full h-48 object-cover rounded-md mb-4">
                 <h3 class="text-xl font-semibold mb-2">${house.title}</h3>
                 <p class="text-gray-700 mb-2">${house.description}</p>
-                <p class="font-bold text-lg mb-2">Price: $${house.price}</p>
-                ${house.discountInfo ? `<p class="text-green-600">Discount: ${house.discountInfo.discount}% — $${house.discountInfo.price}</p>` : ''}
+                <p class="font-bold text-lg">Price: $${house.price}</p>
+                ${house.discountInfo ? `<p class="text-green-600">
+                    Discount ${house.discountInfo.discount}% — $${house.discountInfo.price}
+                </p>` : ''}
             `;
 
             container.appendChild(div);
         });
     } catch (err) {
-        console.error('Error loading houses:', err);
+        console.error(err);
     }
 }
 

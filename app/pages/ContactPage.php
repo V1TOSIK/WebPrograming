@@ -27,9 +27,9 @@
             <textarea name="message" rows="4" required class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
         </div>
 
-        <div class="text-center space-x-4">
+        <div class="flex text-center space-x-4">
             <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition w-1/2">Send</button>
-            <button type="reset" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition w-1/2">Clear</button>
+            <button type="reset" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition w-1/2">Clear</button>
         </div>
     </form>
 

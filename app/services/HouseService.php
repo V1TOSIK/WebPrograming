@@ -8,8 +8,13 @@ class HouseService {
         $this->repo = $repo;
     }
 
+    public function getHouses(int $limit): array {
+        return $this->repo->getAll($limit);
+    }
+
     public function getLatestHouses(int $limit = 3): array {
-        $houses = $this->repo->all($limit);
+        $houses = $this->repo->getAll($limit);
+
 
         // Додаємо бізнес-логіку: випадкова знижка
         foreach ($houses as $house) {

@@ -17,33 +17,31 @@
 async function loadHouses(limit = 3) {
     try {
         const res = await fetch(`/endpoints/houses.php?limit=${limit}`);
-        const houses = await res.json();
+        const data = await res.json();
+        const houses = data.houses ?? data;
 
         const container = document.getElementById('houses-container');
         container.innerHTML = '';
 
         houses.forEach(house => {
             const div = document.createElement('div');
-            div.className = 'bg-white shadow-lg rounded-lg p-4';
+            div.className = "bg-white shadow rounded-lg p-6";
+
             div.innerHTML = `
-                <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="${house.title}" class="w-full h-48 object-cover">
+                <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
+                     class="w-full h-48 object-cover rounded-md mb-4">
                 <h3 class="text-xl font-semibold mb-2">${house.title}</h3>
-                <p class="text-gray-600 mb-2">${house.description}</p>
-                <p class="font-bold mt-2">
-                    ${house.discountInfo && house.discountInfo.discount > 0
-                        ? `<span class="line-through text-gray-400">$${house.price}</span> 
-                           <span class="text-green-600">$${house.discountInfo.price}</span>`
-                        : `Price: $${house.price}`
-                    }
-                </p>
-                ${house.discountInfo && house.discountInfo.discount > 0 
-                    ? `<p class="text-red-600">Discount: ${house.discountInfo.discount}%</p>` 
-                    : ''}
+                <p class="text-gray-700 mb-2">${house.description}</p>
+                <p class="font-bold text-lg">Price: $${house.price}</p>
+                ${house.discountInfo ? `<p class="text-green-600">
+                    Discount ${house.discountInfo.discount}% — $${house.discountInfo.price}
+                </p>` : ''}
             `;
+
             container.appendChild(div);
         });
-    } catch (error) {
-        console.error('Error loading houses:', error);
+    } catch (err) {
+        console.error(err);
     }
 }
 
