@@ -24,6 +24,19 @@ class HouseService {
         return $houses;
     }
 
+    public function getFilteredHouses(int $limit, array $filters): array {
+        return $this->repo->getFiltered($limit, $filters);
+    }
+
+    public function likeHouse(int $id): bool {
+        return $this->repo->incrementLikes($id);
+    }
+
+    public function getSliderHouses(): array {
+        return $this->repo->getSliderHouses();
+    }
+
+
     public function getDiscountedPrice(int $price): array {
         $discount = rand(0, 30);
         $discountedPrice = $price - ($price * $discount / 100);
