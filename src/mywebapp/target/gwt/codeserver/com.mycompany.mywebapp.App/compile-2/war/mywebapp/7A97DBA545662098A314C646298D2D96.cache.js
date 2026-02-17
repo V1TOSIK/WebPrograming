@@ -1,4 +1,4 @@
-var $wnd = $wnd || window.parent;var __gwtModuleFunction = $wnd.mywebapp;var $sendStats = __gwtModuleFunction.__sendStats;$sendStats('moduleStartup', 'moduleEvalStart');var $gwt_version = "2.13.0";var $strongName = 'C3CC5D59FD8FBECAA71830C1DF504FAC';var $gwt = {};var $doc = $wnd.document;var $moduleName, $moduleBase;function __gwtStartLoadingFragment(frag) {var fragFile = 'deferredjs/' + $strongName + '/' + frag + '.cache.js';return __gwtModuleFunction.__startLoadingFragment(fragFile);}function __gwtInstallCode(code) {return __gwtModuleFunction.__installRunAsyncCode(code);}function __gwt_isKnownPropertyValue(propName, propValue) {return __gwtModuleFunction.__gwt_isKnownPropertyValue(propName, propValue);}function __gwt_getMetaProperty(name) {return __gwtModuleFunction.__gwt_getMetaProperty(name);}var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent && $wnd.__gwtStatsEvent(a);} : null;var $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;var _, prototypesByTypeId_1_g$, initFnList_1_g$, PERMUTATION_NOT_SET_0_g$ = -1, permutationId_0_g$ = -1;
+var $wnd = $wnd || window.parent;var __gwtModuleFunction = $wnd.mywebapp;var $sendStats = __gwtModuleFunction.__sendStats;$sendStats('moduleStartup', 'moduleEvalStart');var $gwt_version = "2.13.0";var $strongName = '7A97DBA545662098A314C646298D2D96';var $gwt = {};var $doc = $wnd.document;var $moduleName, $moduleBase;function __gwtStartLoadingFragment(frag) {var fragFile = 'deferredjs/' + $strongName + '/' + frag + '.cache.js';return __gwtModuleFunction.__startLoadingFragment(fragFile);}function __gwtInstallCode(code) {return __gwtModuleFunction.__installRunAsyncCode(code);}function __gwt_isKnownPropertyValue(propName, propValue) {return __gwtModuleFunction.__gwt_isKnownPropertyValue(propName, propValue);}function __gwt_getMetaProperty(name) {return __gwtModuleFunction.__gwt_getMetaProperty(name);}var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent && $wnd.__gwtStatsEvent(a);} : null;var $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;var _, prototypesByTypeId_1_g$, initFnList_1_g$, PERMUTATION_NOT_SET_0_g$ = -1, permutationId_0_g$ = -1;
 function Mic_g$(){
   if (!(permutationId_0_g$ != -1)) {
     debugger;
@@ -12568,6 +12568,273 @@ function Mib_g$(node_0_g$){
 }
 
 var TAG_11_g$ = 'form';
+function Wib_g$(){
+  Wib_g$ = Object;
+  v2_g$();
+}
+
+function Xib_g$(this$static_0_g$){
+  Wib_g$();
+}
+
+function Yib_g$(this$static_0_g$){
+  Wib_g$();
+  return this$static_0_g$.contentWindow.document;
+}
+
+function Zib_g$(this$static_0_g$){
+  Wib_g$();
+  return this$static_0_g$.frameBorder;
+}
+
+function $ib_g$(this$static_0_g$){
+  Wib_g$();
+  return this$static_0_g$.longDesc;
+}
+
+function _ib_g$(this$static_0_g$){
+  Wib_g$();
+  return this$static_0_g$.marginHeight;
+}
+
+function ajb_g$(this$static_0_g$){
+  Wib_g$();
+  return this$static_0_g$.marginWidth;
+}
+
+function bjb_g$(this$static_0_g$){
+  Wib_g$();
+  return this$static_0_g$.name;
+}
+
+function cjb_g$(this$static_0_g$){
+  Wib_g$();
+  return this$static_0_g$.scrolling;
+}
+
+function djb_g$(this$static_0_g$){
+  Wib_g$();
+  return this$static_0_g$.src;
+}
+
+function fjb_g$(this$static_0_g$){
+  Wib_g$();
+  return !!this$static_0_g$.noResize;
+}
+
+function gjb_g$(this$static_0_g$, frameBorder_0_g$){
+  Wib_g$();
+  this$static_0_g$.frameBorder = frameBorder_0_g$;
+}
+
+function hjb_g$(this$static_0_g$, longDesc_0_g$){
+  Wib_g$();
+  ijb_g$(this$static_0_g$, longDesc_0_g$.asString_0_g$());
+}
+
+function ijb_g$(this$static_0_g$, longDesc_0_g$){
+  Wib_g$();
+  this$static_0_g$.longDesc = longDesc_0_g$;
+}
+
+function jjb_g$(this$static_0_g$, marginHeight_0_g$){
+  Wib_g$();
+  this$static_0_g$.marginHeight = marginHeight_0_g$;
+}
+
+function kjb_g$(this$static_0_g$, marginWidth_0_g$){
+  Wib_g$();
+  this$static_0_g$.marginWidth = marginWidth_0_g$;
+}
+
+function ljb_g$(this$static_0_g$, name_0_g$){
+  Wib_g$();
+  this$static_0_g$.name = name_0_g$;
+}
+
+function mjb_g$(this$static_0_g$, noResize_0_g$){
+  Wib_g$();
+  this$static_0_g$.noResize = noResize_0_g$;
+}
+
+function njb_g$(this$static_0_g$, scrolling_0_g$){
+  Wib_g$();
+  this$static_0_g$.scrolling = scrolling_0_g$;
+}
+
+function ojb_g$(this$static_0_g$, src_0_g$){
+  Wib_g$();
+  pjb_g$(this$static_0_g$, src_0_g$.asString_0_g$());
+}
+
+function pjb_g$(this$static_0_g$, src_0_g$){
+  Wib_g$();
+  this$static_0_g$.src = src_0_g$;
+}
+
+function qjb_g$(){
+  Wib_g$();
+  W3_g$.call(this);
+  Xib_g$(this);
+}
+
+function rjb_g$(elem_0_g$){
+  Wib_g$();
+  if (!Bjb_g$(elem_0_g$)) {
+    debugger;
+    throw ajc_g$(Sic_g$());
+  }
+  return elem_0_g$;
+}
+
+function Ajb_g$(o_0_g$){
+  Wib_g$();
+  if ($4_g$(o_0_g$)) {
+    return Bjb_g$(o_0_g$);
+  }
+  return false;
+}
+
+function Bjb_g$(elem_0_g$){
+  Wib_g$();
+  return sic_g$(elem_0_g$) && w3_g$(elem_0_g$, Xhc_g$('frame'));
+}
+
+function Cjb_g$(node_0_g$){
+  Wib_g$();
+  if (_4_g$(node_0_g$)) {
+    return Bjb_g$(node_0_g$);
+  }
+  return false;
+}
+
+var TAG_12_g$ = 'frame';
+function Akb_g$(){
+  Akb_g$ = Object;
+  v2_g$();
+}
+
+function Bkb_g$(this$static_0_g$){
+  Akb_g$();
+}
+
+function Ckb_g$(this$static_0_g$){
+  Akb_g$();
+  return this$static_0_g$.contentWindow.document;
+}
+
+function Dkb_g$(this$static_0_g$){
+  Akb_g$();
+  return this$static_0_g$.frameBorder;
+}
+
+function Ekb_g$(this$static_0_g$){
+  Akb_g$();
+  return this$static_0_g$.marginHeight;
+}
+
+function Fkb_g$(this$static_0_g$){
+  Akb_g$();
+  return this$static_0_g$.marginWidth;
+}
+
+function Gkb_g$(this$static_0_g$){
+  Akb_g$();
+  return this$static_0_g$.name;
+}
+
+function Hkb_g$(this$static_0_g$){
+  Akb_g$();
+  return this$static_0_g$.scrolling;
+}
+
+function Ikb_g$(this$static_0_g$){
+  Akb_g$();
+  return this$static_0_g$.src;
+}
+
+function Kkb_g$(this$static_0_g$){
+  Akb_g$();
+  return !!this$static_0_g$.noResize;
+}
+
+function Lkb_g$(this$static_0_g$, frameBorder_0_g$){
+  Akb_g$();
+  this$static_0_g$.frameBorder = frameBorder_0_g$;
+}
+
+function Mkb_g$(this$static_0_g$, marginHeight_0_g$){
+  Akb_g$();
+  this$static_0_g$.marginHeight = marginHeight_0_g$;
+}
+
+function Nkb_g$(this$static_0_g$, marginWidth_0_g$){
+  Akb_g$();
+  this$static_0_g$.marginWidth = marginWidth_0_g$;
+}
+
+function Okb_g$(this$static_0_g$, name_0_g$){
+  Akb_g$();
+  this$static_0_g$.name = name_0_g$;
+}
+
+function Pkb_g$(this$static_0_g$, noResize_0_g$){
+  Akb_g$();
+  this$static_0_g$.noResize = noResize_0_g$;
+}
+
+function Qkb_g$(this$static_0_g$, scrolling_0_g$){
+  Akb_g$();
+  this$static_0_g$.scrolling = scrolling_0_g$;
+}
+
+function Rkb_g$(this$static_0_g$, src_0_g$){
+  Akb_g$();
+  Skb_g$(this$static_0_g$, src_0_g$.asString_0_g$());
+}
+
+function Skb_g$(this$static_0_g$, src_0_g$){
+  Akb_g$();
+  this$static_0_g$.src = src_0_g$;
+}
+
+function Tkb_g$(){
+  Akb_g$();
+  W3_g$.call(this);
+  Bkb_g$(this);
+}
+
+function Ukb_g$(elem_0_g$){
+  Akb_g$();
+  if (!blb_g$(elem_0_g$)) {
+    debugger;
+    throw ajc_g$(Sic_g$());
+  }
+  return elem_0_g$;
+}
+
+function alb_g$(o_0_g$){
+  Akb_g$();
+  if ($4_g$(o_0_g$)) {
+    return blb_g$(o_0_g$);
+  }
+  return false;
+}
+
+function blb_g$(elem_0_g$){
+  Akb_g$();
+  return sic_g$(elem_0_g$) && w3_g$(elem_0_g$, Xhc_g$('iframe'));
+}
+
+function clb_g$(node_0_g$){
+  Akb_g$();
+  if (_4_g$(node_0_g$)) {
+    return blb_g$(node_0_g$);
+  }
+  return false;
+}
+
+var TAG_16_g$ = 'iframe';
 function Epb_g$(){
   Epb_g$ = Object;
   lt_g$();
@@ -15627,6 +15894,11 @@ function $Zb_g$(){
 }
 
 var Lcom_google_gwt_event_dom_client_HasKeyUpHandlers_2_classLit_0_g$ = kBd_g$('com.google.gwt.event.dom.client', 'HasKeyUpHandlers');
+function _Zb_g$(){
+  _Zb_g$ = Object;
+}
+
+var Lcom_google_gwt_event_dom_client_HasLoadHandlers_2_classLit_0_g$ = kBd_g$('com.google.gwt.event.dom.client', 'HasLoadHandlers');
 function a$b_g$(){
   a$b_g$ = Object;
 }
@@ -15772,49 +16044,6 @@ _.toDebugString_0_g$ = function D$b_g$(){
 }
 ;
 var Lcom_google_gwt_event_dom_client_KeyCodeEvent_2_classLit_0_g$ = iBd_g$('com.google.gwt.event.dom.client', 'KeyCodeEvent', 763, Lcom_google_gwt_event_dom_client_KeyEvent_2_classLit_0_g$);
-function E$b_g$(){
-  E$b_g$ = Object;
-  a_g$();
-}
-
-function G$b_g$(){
-  E$b_g$();
-  i_g$.call(this);
-  this.$init_481_g$();
-}
-
-function H$b_g$(code_0_g$){
-  E$b_g$();
-  switch (code_0_g$) {
-    case 40:
-    case 39:
-    case 38:
-    case 37:
-      return true;
-    default:return false;
-  }
-}
-
-function I$b_g$(code_0_g$, isRtl_0_g$){
-  E$b_g$();
-  if (isRtl_0_g$) {
-    if (code_0_g$ == 39) {
-      code_0_g$ = 37;
-    }
-     else if (code_0_g$ == 37) {
-      code_0_g$ = 39;
-    }
-  }
-  return code_0_g$;
-}
-
-qkc_g$(764, 1, {764:1, 1:1}, G$b_g$);
-_.$init_481_g$ = function F$b_g$(){
-  E$b_g$();
-}
-;
-var KEY_A_0_g$ = 65, KEY_ALT_0_g$ = 18, KEY_B_0_g$ = 66, KEY_BACKSPACE_0_g$ = 8, KEY_C_0_g$ = 67, KEY_CAPS_LOCK_0_g$ = 20, KEY_CLOSE_BRACKET_0_g$ = 221, KEY_CONTEXT_MENU_0_g$ = 93, KEY_CTRL_0_g$ = 17, KEY_D_0_g$ = 68, KEY_DELETE_0_g$ = 46, KEY_DOWN_0_g$ = 40, KEY_E_0_g$ = 69, KEY_EIGHT_0_g$ = 56, KEY_END_0_g$ = 35, KEY_ENTER_0_g$ = 13, KEY_ESCAPE_0_g$ = 27, KEY_F_0_g$ = 70, KEY_F1_0_g$ = 112, KEY_F10_0_g$ = 121, KEY_F11_0_g$ = 122, KEY_F12_0_g$ = 123, KEY_F2_0_g$ = 113, KEY_F3_0_g$ = 114, KEY_F4_0_g$ = 115, KEY_F5_0_g$ = 116, KEY_F6_0_g$ = 117, KEY_F7_0_g$ = 118, KEY_F8_0_g$ = 119, KEY_F9_0_g$ = 120, KEY_FIRST_MEDIA_KEY_0_g$ = 166, KEY_FIVE_0_g$ = 53, KEY_FOUR_0_g$ = 52, KEY_G_0_g$ = 71, KEY_H_0_g$ = 72, KEY_HOME_0_g$ = 36, KEY_I_0_g$ = 73, KEY_INSERT_0_g$ = 45, KEY_J_0_g$ = 74, KEY_K_0_g$ = 75, KEY_L_0_g$ = 76, KEY_LAST_MEDIA_KEY_0_g$ = 183, KEY_LEFT_0_g$ = 37, KEY_M_0_g$ = 77, KEY_MAC_ENTER_0_g$ = 3, KEY_MAC_FF_META_0_g$ = 224, KEY_N_0_g$ = 78, KEY_NINE_0_g$ = 57, KEY_NUMLOCK_0_g$ = 144, KEY_NUM_CENTER_0_g$ = 12, KEY_NUM_DIVISION_0_g$ = 111, KEY_NUM_EIGHT_0_g$ = 104, KEY_NUM_FIVE_0_g$ = 101, KEY_NUM_FOUR_0_g$ = 100, KEY_NUM_MINUS_0_g$ = 109, KEY_NUM_MULTIPLY_0_g$ = 106, KEY_NUM_NINE_0_g$ = 105, KEY_NUM_ONE_0_g$ = 97, KEY_NUM_PERIOD_0_g$ = 110, KEY_NUM_PLUS_0_g$ = 107, KEY_NUM_SEVEN_0_g$ = 103, KEY_NUM_SIX_0_g$ = 102, KEY_NUM_THREE_0_g$ = 99, KEY_NUM_TWO_0_g$ = 98, KEY_NUM_ZERO_0_g$ = 96, KEY_O_0_g$ = 79, KEY_ONE_0_g$ = 49, KEY_OPEN_BRACKET_0_g$ = 219, KEY_P_0_g$ = 80, KEY_PAGEDOWN_0_g$ = 34, KEY_PAGEUP_0_g$ = 33, KEY_PAUSE_0_g$ = 19, KEY_PRINT_SCREEN_0_g$ = 44, KEY_Q_0_g$ = 81, KEY_R_0_g$ = 82, KEY_RIGHT_0_g$ = 39, KEY_S_0_g$ = 83, KEY_SCROLL_LOCK_0_g$ = 145, KEY_SEVEN_0_g$ = 55, KEY_SHIFT_0_g$ = 16, KEY_SIX_0_g$ = 54, KEY_SPACE_0_g$ = 32, KEY_T_0_g$ = 84, KEY_TAB_0_g$ = 9, KEY_THREE_0_g$ = 51, KEY_TWO_0_g$ = 50, KEY_U_0_g$ = 85, KEY_UP_0_g$ = 38, KEY_V_0_g$ = 86, KEY_W_0_g$ = 87, KEY_WIN_IME_0_g$ = 229, KEY_WIN_KEY_0_g$ = 224, KEY_WIN_KEY_FF_LINUX_0_g$ = 0, KEY_WIN_KEY_LEFT_META_0_g$ = 91, KEY_WIN_KEY_RIGHT_0_g$ = 92, KEY_X_0_g$ = 88, KEY_Y_0_g$ = 89, KEY_Z_0_g$ = 90, KEY_ZERO_0_g$ = 48;
-var Lcom_google_gwt_event_dom_client_KeyCodes_2_classLit_0_g$ = iBd_g$('com.google.gwt.event.dom.client', 'KeyCodes', 764, Ljava_lang_Object_2_classLit_0_g$);
 function e_b_g$(){
   e_b_g$ = Object;
   u$b_g$();
@@ -28552,6 +28781,74 @@ _.get_12_g$ = function i_c_g$(arg0_0_g$){
 }
 ;
 var Lcom_google_gwt_user_client_ui_FormPanel_1IFrameTemplateImpl_2_classLit_0_g$ = iBd_g$('com.google.gwt.user.client.ui', 'FormPanel_IFrameTemplateImpl', 1160, Ljava_lang_Object_2_classLit_0_g$);
+function t_c_g$(){
+  t_c_g$ = Object;
+  qOc_g$();
+}
+
+function v_c_g$(){
+  t_c_g$();
+  sOc_g$.call(this);
+  this.$init_742_g$();
+  this.setElement_0_g$(Ydb_g$(whb_g$()));
+  this.setStyleName_0_g$(Xhc_g$('gwt-Frame'));
+}
+
+function w_c_g$(element_0_g$){
+  t_c_g$();
+  sOc_g$.call(this);
+  this.$init_742_g$();
+  Ukb_g$(element_0_g$);
+  this.setElement_0_g$(element_0_g$);
+}
+
+function x_c_g$(url_0_g$){
+  t_c_g$();
+  v_c_g$.call(this);
+  this.setUrl_0_g$(url_0_g$);
+}
+
+function D_c_g$(element_0_g$){
+  t_c_g$();
+  var frame_0_g$;
+  if (!O1_g$(gfb_g$(whb_g$()), element_0_g$)) {
+    debugger;
+    throw ajc_g$(Sic_g$());
+  }
+  frame_0_g$ = new w_c_g$(element_0_g$);
+  frame_0_g$.onAttach_0_g$();
+  wed_g$(frame_0_g$);
+  return frame_0_g$;
+}
+
+qkc_g$(1163, 1346, {749:1, 808:1, 831:1, 1018:1, 1163:1, 1194:1, 1213:1, 1332:1, 1346:1, 1:1}, v_c_g$, w_c_g$, x_c_g$);
+_.$init_742_g$ = function u_c_g$(){
+  t_c_g$();
+}
+;
+_.addLoadHandler_0_g$ = function y_c_g$(handler_0_g$){
+  return this.addDomHandler_0_g$(handler_0_g$, w_b_g$());
+}
+;
+_.getFrameElement_0_g$ = function z_c_g$(){
+  t_c_g$();
+  return nt_g$(this.getElement_0_g$());
+}
+;
+_.getUrl_0_g$ = function A_c_g$(){
+  return djb_g$(this.getFrameElement_0_g$());
+}
+;
+_.setUrl_1_g$ = function B_c_g$(url_0_g$){
+  ojb_g$(this.getFrameElement_0_g$(), url_0_g$);
+}
+;
+_.setUrl_0_g$ = function C_c_g$(url_0_g$){
+  pjb_g$(this.getFrameElement_0_g$(), url_0_g$);
+}
+;
+var DEFAULT_STYLENAME_4_g$ = 'gwt-Frame';
+var Lcom_google_gwt_user_client_ui_Frame_2_classLit_0_g$ = iBd_g$('com.google.gwt.user.client.ui', 'Frame', 1163, Lcom_google_gwt_user_client_ui_Widget_2_classLit_0_g$);
 function l2c_g$(){
   l2c_g$ = Object;
 }
@@ -31595,6 +31892,18 @@ function bud_g$(emailBox_0_0_g$, event_1_0_g$){
   }
 }
 
+function Gcf_g$(event_0_0_g$){
+  $td_g$();
+  var weatherFrame_0_g$;
+  {
+    weatherFrame_0_g$ = new x_c_g$('https://www.meteoblue.com/en/weather/widget/daily/rivne_ukraine_695594?geoloc=fixed&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&days=4&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1&windspeed=1&windgust=0&winddirection=1&uv=0&humidity=0&precipitation=1&precipitationprobability=1&spot=1&pressure=0&layout=light');
+    weatherFrame_0_g$.setWidth_1_g$('300px');
+    weatherFrame_0_g$.setHeight_1_g$('250px');
+    zed_g$('weatherContainer').clear_0_g$();
+    zed_g$('weatherContainer').add_4_g$(weatherFrame_0_g$);
+  }
+}
+
 qkc_g$(1387, 1, {234:1, 1387:1, 1:1}, aud_g$);
 _.$init_878_g$ = function _td_g$(){
   $td_g$();
@@ -31602,7 +31911,7 @@ _.$init_878_g$ = function _td_g$(){
 }
 ;
 _.onModuleLoad_0_g$ = function cud_g$(){
-  var closeButton_0_g$, dialogBox_0_g$, dialogVPanel_0_g$, emailBox_0_g$, errorLabel_0_g$, form_0_g$, handler_0_g$, header_0_g$, nameField_0_g$, panel_0_g$, sendButton_0_g$, serverResponseLabel_0_g$, submitButton_0_g$, textToServerLabel_0_g$;
+  var closeButton_0_g$, dialogBox_0_g$, dialogVPanel_0_g$, emailBox_0_g$, errorLabel_0_g$, form_0_g$, handler_0_g$, header_0_g$, nameField_0_g$, panel_0_g$, sendButton_0_g$, serverResponseLabel_0_g$, submitButton_0_g$, textToServerLabel_0_g$, weatherButton_0_g$;
   header_0_g$ = new DWc_g$('\u041C\u0456\u0439 \u0441\u0430\u0439\u0442');
   header_0_g$.setStyleName_0_g$('text-center text-3xl font-bold p-4 bg-blue-500 text-white');
   zed_g$('header').add_4_g$(header_0_g$);
@@ -31617,6 +31926,11 @@ _.onModuleLoad_0_g$ = function cud_g$(){
   submitButton_0_g$.addClickHandler_0_g$(new vud_g$(emailBox_0_g$));
   panel_0_g$.add_4_g$(submitButton_0_g$);
   yed_g$().add_4_g$(form_0_g$);
+  zed_g$('weatherContainer').addStyleName_0_g$('p-4 bg-blue-100 rounded-lg mt-2');
+  weatherButton_0_g$ = new BRc_g$('\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u0438 \u043F\u043E\u0433\u043E\u0434\u0443');
+  weatherButton_0_g$.addStyleName_0_g$('bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600');
+  zed_g$('weatherButton').add_4_g$(weatherButton_0_g$);
+  weatherButton_0_g$.addClickHandler_0_g$(new Jcf_g$);
   sendButton_0_g$ = new BRc_g$('Send to Server');
   sendButton_0_g$.addStyleName_0_g$('bg-green-500 px-2 py-2 rounded-lg text-white ml-4');
   nameField_0_g$ = new Qkd_g$;
@@ -31789,6 +32103,24 @@ _.onClick_0_g$ = function wud_g$(arg0_0_g$){
 }
 ;
 var Lcom_mycompany_mywebapp_App$lambda$0$Type_2_classLit_0_g$ = iBd_g$('com.mycompany.mywebapp', 'App/lambda$0$Type', 1391, Ljava_lang_Object_2_classLit_0_g$);
+function Hcf_g$(){
+  Hcf_g$ = Object;
+}
+
+function Jcf_g$(){
+  Hcf_g$();
+}
+
+qkc_g$(2087, 1, {690:1, 824:1, 2087:1, 1:1}, Jcf_g$);
+_.$init_1428_g$ = function Icf_g$(){
+  Hcf_g$();
+}
+;
+_.onClick_0_g$ = function Kcf_g$(arg0_0_g$){
+  Gcf_g$(arg0_0_g$);
+}
+;
+var Lcom_mycompany_mywebapp_App$lambda$1$Type_2_classLit_0_g$ = iBd_g$('com.mycompany.mywebapp', 'App/lambda$1$Type', 2087, Ljava_lang_Object_2_classLit_0_g$);
 function xud_g$(){
   xud_g$ = Object;
   a_g$();
@@ -41013,6 +41345,6 @@ var gwtOnLoad = ikc_g$;
 gkc_g$(Qkc_g$);
 kkc_g$('permProps', [[['locale', 'default'], ['user.agent', 'gecko1_8']]]);
 $sendStats('moduleStartup', 'moduleEvalEnd');gwtOnLoad(__gwtModuleFunction.__errFn, __gwtModuleFunction.__moduleName, __gwtModuleFunction.__moduleBase, __gwtModuleFunction.__softPermutationId,__gwtModuleFunction.__computePropValue);$sendStats('moduleStartup', 'end');$gwt && $gwt.permProps && __gwtModuleFunction.__moduleStartupDone($gwt.permProps);
-//# sourceMappingURL=http://127.0.0.1:9876/sourcemaps/mywebapp/C3CC5D59FD8FBECAA71830C1DF504FAC_sourcemap.json 
+//# sourceMappingURL=http://127.0.0.1:9876/sourcemaps/mywebapp/7A97DBA545662098A314C646298D2D96_sourcemap.json 
 //# sourceURL=mywebapp-0.js
 

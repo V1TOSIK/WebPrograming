@@ -1,6 +1,7 @@
 package com.mycompany.mywebapp;
 
 import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.ui.Frame;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -61,6 +62,24 @@ public class App implements EntryPoint {
 		panel.add(submitButton);
 
 		RootPanel.get().add(form);
+		RootPanel.get("weatherContainer").addStyleName("p-4 bg-blue-100 rounded-lg mt-2");
+
+
+		Button weatherButton = new Button("Показати погоду");
+		weatherButton.addStyleName("bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600");
+		RootPanel.get("weatherButton").add(weatherButton);
+
+		weatherButton.addClickHandler(event -> {
+			// Створюємо Frame для віджета погоди
+			Frame weatherFrame = new Frame("https://www.meteoblue.com/en/weather/widget/daily/rivne_ukraine_695594?geoloc=fixed&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&days=4&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1&windspeed=1&windgust=0&winddirection=1&uv=0&humidity=0&precipitation=1&precipitationprobability=1&spot=1&pressure=0&layout=light");
+			weatherFrame.setWidth("300px");  // ширина iframe
+			weatherFrame.setHeight("250px"); // висота iframe
+
+			// Очищаємо контейнер перед вставкою
+			RootPanel.get("weatherContainer").clear();
+			RootPanel.get("weatherContainer").add(weatherFrame);
+		});
+
 
 
 		final Button sendButton = new Button("Send to Server");
