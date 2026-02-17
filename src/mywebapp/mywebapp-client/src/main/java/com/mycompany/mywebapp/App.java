@@ -1,5 +1,7 @@
 package com.mycompany.mywebapp;
 
+import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -39,7 +41,30 @@ public class App implements EntryPoint {
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
-		final Button sendButton = new Button(&quot;Send to Server&quot;);
+		HTML header = new HTML("Мій сайт");
+		header.setStyleName("text-center text-3xl font-bold p-4 bg-blue-500 text-white");
+		RootPanel.get("header").add(header);
+
+		FormPanel form = new FormPanel();
+		VerticalPanel panel = new VerticalPanel();
+		form.setWidget(panel);
+
+		TextBox emailBox = new TextBox();
+		emailBox.getElement().setPropertyString("placeholder", "Введіть ваш email");
+		panel.add(emailBox);
+
+		Button submitButton = new Button("Підписатися");
+		submitButton.addStyleName("bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600");
+		submitButton.addClickHandler(event -> {
+			Window.alert("Ви підписалися на: " + emailBox.getText());
+		});
+		panel.add(submitButton);
+
+		RootPanel.get().add(form);
+
+
+		final Button sendButton = new Button("Send to Server");
+		sendButton.addStyleName("bg-green-500 px-2 py-2 rounded-lg text-white ml-4");
 		final TextBox nameField = new TextBox();
 		nameField.setText("GWT User");
 		final Label errorLabel = new Label();
@@ -59,6 +84,7 @@ public class App implements EntryPoint {
 
 		// Create the popup dialog box
 		final DialogBox dialogBox = new DialogBox();
+		dialogBox.addStyleName("bg-green-500 px-2 py-2 rounded-lg text-white");
 		dialogBox.setText("Remote Procedure Call");
 		dialogBox.setAnimationEnabled(true);
 		final Button closeButton = new Button("Close");
