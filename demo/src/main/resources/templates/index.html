@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started</title>
+  <meta charset="UTF-8"/>
+  <link th:href="@{/main.css}" rel="stylesheet"/>
+</head>
+<body>
+  <h1 class="mt-2 text-xl" th:text="'Hello!'"></h1>
+
+  <form th:action="@{/results}" method="post" th:object="${contactForm}" class="px-6 pb-12 max-w-2xl mx-auto">
+    <div class="flex items-center border-b border-b-2 border-gray-400 py-2">
+      <input type="text" th:field="*{name}" placeholder="Name" class="appearance-none bg-transparent border-none w-full placeholder-gray-700 py-1 text-xl focus:outline-none"/>
+    </div>
+    <div class="flex items-center border-b border-b-2 border-gray-400 py-2">
+      <input type="text" th:field="*{email}" placeholder="Email Address" class="appearance-none bg-transparent border-none w-full placeholder-gray-700 py-1 text-xl focus:outline-none"/>
+    </div>
+    <div class="flex items-center border-b border-b-2 border-gray-400 py-2">
+      <input type="text" th:field="*{phone}" placeholder="Phone Number" class="appearance-none bg-transparent border-none w-full placeholder-gray-700 py-1 text-xl focus:outline-none"/>
+    </div>
+    <div class="flex items-center border-b border-b-2 border-gray-400 py-2">
+      <textarea th:field="*{message}" placeholder="Message" rows="5" class="appearance-none border-none w-full placeholder-gray-700 py-1 text-xl focus:outline-none"></textarea>
+    </div>
+    <div class="py-5">
+      <button type="submit" class="bg-green-500 px-8 py-5 rounded-lg text-white">Send</button>
+    </div>
+  </form>
+</body>
+</html>

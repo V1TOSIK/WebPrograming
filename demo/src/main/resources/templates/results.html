@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Contact Form Results</title>
+  <link th:href="@{/main.css}" rel="stylesheet"/>
+</head>
+<body>
+  <div class="max-w-xl mx-auto p-6">
+    <h2 class="text-2xl mb-4">Registration Succeeded!</h2>
+    <p><strong>Name:</strong> <span th:text="${contactForm.name}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${contactForm.email}"></span></p>
+    <p><strong>Phone:</strong> <span th:text="${contactForm.phone}"></span></p>
+    <p><strong>Message:</strong> <span th:text="${contactForm.message}"></span></p>
+  </div>
+</body>
+</html>
