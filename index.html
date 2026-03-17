@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Онлайн маркетплейс з кращими товарами за вигідними цінами">
+  <meta name="keywords" content="маркетплейс, купити онлайн, товари, магазин, ціни, доставка">
+  <meta name="author" content="Student">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Мій Маркетплейс">
+  <meta property="og:description" content="Кращі товари онлайн">
+  <meta property="og:type" content="website">
+
+  <title>Маркетплейс</title>
+
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Мій Маркетплейс</h1>
+</header>
+
+<div class="container">
+  <div class="card">
+    <img src="images/Smartphone.webp" alt="Смартфон сучасний">
+    <h3>Смартфон</h3>
+    <p class="price">10000 грн</p>
+    <button onclick="buy()">Купити</button>
+  </div>
+
+  <div class="card">
+    <img src="images/Laptop.webp" alt="Ноутбук для роботи">
+    <h3>Ноутбук</h3>
+    <p class="price">25000 грн</p>
+    <button onclick="buy()">Купити</button>
+  </div>
+
+  <div class="card">
+    <img src="images/Headphone.webp" alt="Навушники бездротові">
+    <h3>Навушники</h3>
+    <p class="price">2000 грн</p>
+    <button onclick="buy()">Купити</button>
+  </div>
+</div>
+
+<div class="currency">
+  <button onclick="loadCurrency()">Показати курс валют</button>
+  <table id="currencyTable"></table>
+</div>
+
+<script>
+  function buy() {
+    alert('Товар додано в кошик');
+  }
+
+  function loadCurrency() {
+    fetch('https://api.codetabs.com/v1/proxy?quest=https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+        .then(res => res.json())
+        .then(data => {
+        let table = '<tr><th>Валюта</th><th>Купівля</th><th>Продаж</th></tr>';
+        data.forEach(item => {
+            table += `<tr>
+            <td>${item.ccy}</td>
+            <td>${item.buy}</td>
+            <td>${item.sale}</td>
+            </tr>`;
+        });
+        document.getElementById('currencyTable').innerHTML = table;
+        });
+    }
+</script>
+
+</body>
+</html>
